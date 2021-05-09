@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+	<div class="card">
+		<h:form>
+			<p:growl id="messages" />
+
+			<p:menubar>
+
+				<p:menuitem value="Sortie" icon="pi pi-upload" url="/stock/admin/admin_sortie.jsf" />
+
+				<p:menuitem value="Entrée" icon="pi pi-download" url="/stock/admin/admin_entree.jsf" />
+
+				<p:menuitem value="Articles" icon="pi pi-book" url="/stock/admin/admin_article.jsf"/>
+
+				<p:menuitem value="Categories" icon="pi pi-th-large" url="/stock/admin/admin_categorie.jsf"/>
+
+				<p:menuitem value="Fournisseurs" icon="pi pi-sitemap" url="/stock/admin/admin_fournisseur.jsf"/>
+				
+				<p:menuitem value="Utilisateurs" icon="pi pi-sitemap" url="/stock/admin/admin_utilisateur.jsf"/>
+
+				<f:facet name="options">
+					<p:commandButton icon="pi pi-fw pi-sign-out" styleClass="rounded-button ui-button-info ui-button-flat" action="#{loginBean.logout}"/>
+				</f:facet>
+			</p:menubar>
+		</h:form>
+	</div>
+</ui:composition>

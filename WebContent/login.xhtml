@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui">
+<h:head>
+	<title>login</title>
+	<h:outputStylesheet library="css" name="style.css" />
+	<h:outputStylesheet library="js" name="main.js" />
+</h:head>
+<h:body>
+	<h:form id="authentification">
+		<div class="log-form">
+
+			<p:panel header="Authentification">
+				<p:messages id="msgs" />
+				<div class="ui-fluid">
+					<div class="p-field">
+						<label for="username">Username</label>
+						<p:inputText id="username" type="text"
+							value="#{loginBean.username}" required="true">
+							<f:validateLength minimum="2" />
+						</p:inputText>
+					</div>
+					<div class="p-field">
+						<label for="lastname">Password</label>
+						<p:password id="password" value="#{loginBean.password}"
+							required="true">
+
+						</p:password>
+					</div>
+					<br></br>
+					<div class="p-field">
+						<p:commandButton value="Login" styleClass="ui-button-raised"
+							ajax="false" update="authentification"
+							action="#{loginBean.login}">
+						</p:commandButton>
+					</div>
+
+				</div>
+
+			</p:panel>
+		</div>
+		<!--end log form -->
+	</h:form>
+</h:body>
+</html>

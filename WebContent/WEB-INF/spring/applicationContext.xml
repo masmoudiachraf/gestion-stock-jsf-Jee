@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+    http://www.springframework.org/schema/beans 
+    http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="articleDao" class="main.java.org.polytech.dao.ArticleDao" />
+	
+	<bean id="loginBean" class="main.java.org.polytech.achraf.beans.LoginBean" />
+	<bean id="adminBean" class="main.java.org.polytech.achraf.beans.AdminBean">
+		<property name="articleDao" ref="articleDao"></property>
+	</bean>
+	<bean id="userBean" class="main.java.org.polytech.achraf.beans.UserBean"/>
+	<bean id="adminUserBean" class="main.java.org.polytech.achraf.beans.AdminUsersBean"/>
+	<bean id="adminFournisseurBean" class="main.java.org.polytech.achraf.beans.AdminFournisseurBean"/>
+	<bean id="adminCategorieBean" class="main.java.org.polytech.achraf.beans.AdminCategorieBean"/>
+	<bean id="adminArticleBean" class="main.java.org.polytech.achraf.beans.AdminArticleBean"/>
+</beans>
